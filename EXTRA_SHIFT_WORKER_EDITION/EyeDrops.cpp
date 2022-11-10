@@ -21,7 +21,7 @@ EyeDrops::~EyeDrops() = default;
 void EyeDrops::pollEvent(sf::Event event, sf::Vector2i mousePos)
 {
 	//prolly set it at the abstract class, ur repeating urself
-	InteractablePlace::pollEvent(event, mousePos);
+	//InteractablePlace::pollEvent(event, mousePos);
 	auto itemHeld = Game::getInstance()->getInventory()->getCurrentItemHeld();
 	auto item = Game::getInstance()->getInventory()->getItemByType(itemHeld);
 
@@ -49,5 +49,5 @@ void EyeDrops::pollEvent(sf::Event event, sf::Vector2i mousePos)
 
 void EyeDrops::draw(sf::RenderWindow* window)
 {
-	window->draw(*m_placeStates[m_currentState]);
+	InteractablePlace::draw(window);
 }

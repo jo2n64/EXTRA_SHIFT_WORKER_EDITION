@@ -4,9 +4,10 @@
 
 #include "Game.h"
 #include "EyeDrops.h"
+#include "Meds.h"
 
 //public funcs
-BathroomDrawer::BathroomDrawer() : m_downDrawerOpen(false), m_upperDrawerOpen(false), m_isDownDrawerUnlocked(false)
+BathroomDrawer::BathroomDrawer() : m_downDrawerOpen(true), m_upperDrawerOpen(false), m_isDownDrawerUnlocked(false)
 {
 
 	m_states.push_back(new sf::Sprite(TextureManager::GetTexture("../assets/graphics/bathroom/bathroom_closeup_closed.png")));
@@ -28,8 +29,11 @@ BathroomDrawer::BathroomDrawer() : m_downDrawerOpen(false), m_upperDrawerOpen(fa
 	//bottom drawer
 	Item* alcohol = new Item("../assets/graphics/items/alcohol.png", ItemType::ALCOHOL, sf::Vector2f(0.f, 0.f));
 	Item* bleach = new Item("../assets/graphics/items/bleach.png", ItemType::BLEACH, sf::Vector2f(0.f, 0.f));
-	m_downDrawerItems.push_back(new ItemButton([this]() {}, alcohol, "../assets/graphics/items/alcohol.png", sf::Vector2f(600.f, 600.f)));
+	m_downDrawerItems.push_back(new ItemButton([this]() {}, alcohol, "../assets/graphics/items/alcohol.png", sf::Vector2f(700.f, 600.f)));
 	m_downDrawerItems.push_back(new ItemButton([this]() {}, bleach, "../assets/graphics/items/bleach.png", sf::Vector2f(600.f, 600.f)));
+
+	m_interactablePlaces.push_back(new Meds(sf::Vector2f(520.f, 450.f)));
+
 }
 
 BathroomDrawer::~BathroomDrawer() = default;
@@ -57,7 +61,7 @@ void BathroomDrawer::pollEvent(sf::Event event, sf::Vector2i mousePos)
 		{
 			item->pollEvent(event, mousePos);
 		}
-		//m_interactablePlaces[1]->pollEvent(event, mousePos);
+		m_interactablePlaces[1]->pollEvent(event, mousePos);
 	}
 }
 
@@ -107,7 +111,7 @@ void BathroomDrawer::update(float dt, sf::Vector2i mousePos)
 		{
 			item->update(dt, mousePos);
 		}
-		//m_interactablePlaces[1]->update(dt);
+		m_interactablePlaces[1]->update(dt);
 	}
 }
 

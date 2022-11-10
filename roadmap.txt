@@ -1,6 +1,9 @@
 MAJOR BUGS:
 	-inventory doesnt set current held item to NONE when nothing is held [x]
-	-eye drops still render despite the drawer being closed[]
+	-eye drops still render despite the drawer being closed[x]
+
+MINOR BUGS:
+	-the mouse position is checked for grabbing items, maybe check if it intersects the cursor instead?[]
 
 Features
 	Introduction scene[] - either a video or a text that updates
@@ -36,16 +39,16 @@ Features
 				Can open drawers[x]
 				Upper Drawer
 					Items to pick up
-						Laxatives[]
+						Laxatives[x]
 					Places to mix stuff
-						Eye drops - Requires Bleach[], adds to end result[]
+						Eye drops - Requires Bleach[x], adds to end result[]
 				Lower Drawer
-					Requires Key to open[]
+					Requires Key to open[x]
 					Items to pick up
-						Alcohol[]
-						Bleach[]
+						Alcohol[x]
+						Bleach[x]
 					Places to mix stuff
-						Meds - Requires Vitamins[], adds to end result[]
+						Meds - Requires Vitamins[x], adds to end result[]
 			Kitchen
 				2 states (normal/exploded kitchen) []
 				Connection to KitchenOven[x], Bedroom[x] (after condition) and Corridor[x]

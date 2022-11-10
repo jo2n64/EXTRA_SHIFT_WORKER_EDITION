@@ -22,10 +22,6 @@ Location::~Location()
 	for (const auto iPlace : m_interactablePlaces) {
 		delete iPlace;
 	}
-	for(const auto item : m_items)
-	{
-		delete item;
-	}
 	for (const auto itemButton : m_itemButtons) {
 		delete itemButton;
 	}
@@ -43,12 +39,6 @@ void Location::pollEvent(sf::Event event, sf::Vector2i mousePos)
 	for(const auto iPlace : m_interactablePlaces)
 	{
 		iPlace->pollEvent(event, mousePos);
-	}
-
-	for(const auto item : m_items)
-	{
-		item->pollEvent(event, mousePos);
-		pollItemEvents(item, event, mousePos);
 	}
 
 	for(const auto itemButton : m_itemButtons)
@@ -85,10 +75,6 @@ void Location::update(const float dt, sf::Vector2i mousePos)
 	{
 		iPlace->update(dt);
 	}
-	for(const auto item : m_items)
-	{
-		item->update(dt);
-	}
 
 	for(const auto itemButton : m_itemButtons)
 	{
@@ -106,10 +92,6 @@ void Location::render(sf::RenderWindow* window)
 	for(const auto iPlace : m_interactablePlaces)
 	{
 		iPlace->draw(window);
-	}
-	for(const auto item : m_items)
-	{
-		item->draw(window);
 	}
 	for(const auto itemButton : m_itemButtons)	{
 		itemButton->draw(window);

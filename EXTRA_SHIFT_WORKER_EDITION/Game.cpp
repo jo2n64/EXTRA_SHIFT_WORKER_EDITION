@@ -35,12 +35,12 @@ Game::Game(int width, int height)
 	m_locations["BathroomDrawer"] = new BathroomDrawer();
 
 
-	m_currentLocation = "BathroomDrawer";
+	m_currentLocation = "Kitchen";
 
 	m_gameState = GameState::PLAYING;
 
-	//m_inventory.addItem(new Item("../assets/graphics/items/axe.png", ItemType::AXE));
-	//m_inventory.refreshItemPositions();
+	/*m_inventory.addItem(new Item("../assets/graphics/items/axe.png", ItemType::AXE));
+	m_inventory.refreshItemPositions();*/
 
 	m_window->setMouseCursorVisible(false);
 
