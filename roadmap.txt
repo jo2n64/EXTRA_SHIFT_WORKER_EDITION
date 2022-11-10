@@ -1,0 +1,87 @@
+MAJOR BUGS:
+	-inventory doesnt set current held item to NONE when nothing is held [x]
+
+Features
+	Introduction scene[] - either a video or a text that updates
+	Main Menu - Start[] and Quit[]
+	Game loop
+		Inventory 
+			Adds[x] and removes[x] items
+			Description[] - dynamic text based on item description
+			Timer[] - when timer runs out, switches to game over screen[]
+		Cursor
+			3 states[] - Point[], Grab[], and Look[], changing based on player interaction
+		Rooms
+			Hallway
+				Connection to HallwayAxe[x] and Corridor[x]
+				Door
+					3 states[x]
+					Requires Axe[x]
+					Removes Axe after door is torn down[x]
+			HallwayAxe
+				Connection to Hallway[x]
+				Items to pick up
+					Axe[x]
+			Corridor
+				Connection to Bathroom[x] and Kitchen[x]
+				2 states (open/closed closet) []x
+				Items to pick up
+					Fireworks[x]
+					Catnip[x]
+			Bathroom
+				Connection to BathroomDrawers[x] and Corridor[x]
+			BathroomDrawers
+				Connection to Bathroom[x]
+				Can open drawers[x]
+				Upper Drawer
+					Items to pick up
+						Laxatives[]
+					Places to mix stuff
+						Eye drops - Requires Bleach[], adds to end result[]
+				Lower Drawer
+					Requires Key to open[]
+					Items to pick up
+						Alcohol[]
+						Bleach[]
+					Places to mix stuff
+						Meds - Requires Vitamins[], adds to end result[]
+			Kitchen
+				2 states (normal/exploded kitchen) []
+				Connection to KitchenOven[x], Bedroom[x] (after condition) and Corridor[x]
+				When exiting to Corridor after prepared Oven (see KitchenOven), shake the screen and change to state 2[]
+				Items to pick up
+					Matches[]
+					Screwdriver[] (if not picked up at KitchenOven)
+				Places to mix stuff
+					Cat bed - Requires Catnip[], adds to end result[]
+			KitchenOven
+				Connection to Kitchen[x]
+				Can open kitchen drawer with Screwdriver[]
+				2 states (oven turned on/off) []
+				Items to pick up
+					Screwdriver[]
+				Places to mix stuff
+					Oven - Fireworks[] and Matches[] in that order
+					Matches lose 1 use when used with Oven
+			Bedroom
+				Can reach after Kitchen state 2[]
+				4 states[] - normal, screws, code, open safe
+				Connection to Kitchen[x]
+				3 paintings to click on, one hides a code[]
+				Items to pick up
+					Vitamins[]
+					Key[]
+					Code[]
+				Places to mix stuff
+					Screws - Requires Screwdriver[]
+					Open safe - Requires Alcohol[] and Matches[] in that order
+				Game goes to end result after money are lit up[]
+		Game won screen
+			Shows end result based on tasks finished[]
+			When pressing anywhere, it switches to a second screen[]
+			Pressing that screen changes to Main Menu[]
+		Game over screen
+			Shows after time runs out[]
+			When pressing anywhere, it switches to a second screen[]
+			Pressing that screen changes to Main Menu[]
+	
