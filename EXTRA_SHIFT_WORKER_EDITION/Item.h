@@ -11,7 +11,8 @@ enum class ItemType
 	VITAMINS,
 	CATNIP,
 	ALCOHOL,
-	LAXATIVES
+	LAXATIVES,
+	BLEACH
 };
 
 inline const std::string ToString(ItemType type)

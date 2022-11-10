@@ -3,9 +3,9 @@
 class BathroomDrawer :
     public Location
 {
-    std::vector<sf::Sprite> m_drawers;
-    std::vector<ItemButton> m_upperDrawerItems;
-    std::vector<ItemButton> m_downDrawerItems;
+    std::vector<sf::Sprite*> m_drawers;
+    std::vector<ItemButton*> m_upperDrawerItems;
+    std::vector<ItemButton*> m_downDrawerItems;
 
     bool m_upperDrawerOpen;
     bool m_downDrawerOpen;

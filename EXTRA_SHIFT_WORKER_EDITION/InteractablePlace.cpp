@@ -5,6 +5,7 @@ InteractablePlace::InteractablePlace(std::string name, sf::Vector2f position)
 	m_name = name;
 	m_position = position;
 	m_finished = false;
+	
 }
 
 InteractablePlace::~InteractablePlace()

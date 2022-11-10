@@ -146,6 +146,7 @@
     <ClCompile Include="Corridor.cpp" />
     <ClCompile Include="Cursor.cpp" />
     <ClCompile Include="Door.cpp" />
+    <ClCompile Include="EyeDrops.cpp" />
     <ClCompile Include="Game.cpp" />
     <ClCompile Include="Hallway.cpp" />
     <ClCompile Include="HallwayAxe.cpp" />
@@ -157,6 +158,7 @@
     <ClCompile Include="KitchenOven.cpp" />
     <ClCompile Include="Location.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Meds.cpp" />
     <ClCompile Include="SoundManager.cpp" />
     <ClCompile Include="TextureManager.cpp" />
   </ItemGroup>
@@ -168,6 +170,7 @@
     <ClInclude Include="Corridor.h" />
     <ClInclude Include="Cursor.h" />
     <ClInclude Include="Door.h" />
+    <ClInclude Include="EyeDrops.h" />
     <ClInclude Include="Game.h" />
     <ClInclude Include="Hallway.h" />
     <ClInclude Include="HallwayAxe.h" />
@@ -178,6 +181,7 @@
     <ClInclude Include="Kitchen.h" />
     <ClInclude Include="KitchenOven.h" />
     <ClInclude Include="Location.h" />
+    <ClInclude Include="Meds.h" />
     <ClInclude Include="SoundManager.h" />
     <ClInclude Include="TextureManager.h" />
   </ItemGroup>

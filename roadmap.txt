@@ -1,5 +1,6 @@
 MAJOR BUGS:
 	-inventory doesnt set current held item to NONE when nothing is held [x]
+	-eye drops still render despite the drawer being closed[]
 
 Features
 	Introduction scene[] - either a video or a text that updates
@@ -24,7 +25,7 @@ Features
 					Axe[x]
 			Corridor
 				Connection to Bathroom[x] and Kitchen[x]
-				2 states (open/closed closet) []x
+				2 states (open/closed closet) [x]
 				Items to pick up
 					Fireworks[x]
 					Catnip[x]
